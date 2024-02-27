@@ -1,4 +1,5 @@
 from flask import Flask 
+
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 ##importar el config
@@ -18,7 +19,7 @@ db = SQLAlchemy(app)
 migrate = Migrate(app , db)
 
 #importar los modelos
-from .models import Medico
+from .models import Medico, Paciente , Consultorio, Cita
 
 ## ejecutar el objeto
 if __name__ == '__main__':
